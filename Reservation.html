@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="Media\Favicon.ico"> 
+         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+        
+        <title>Gismat - Arabic Mandi</title>
+
+        <style>
+
+            .bg-image{
+                 
+                
+                background-image: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);
+                
+                background-size: 100vw 100vh;
+                background-repeat: no-repeat;
+            }
+
+            main{
+                
+                color: white;
+                font-family: 'Droid Arabic Kufi', serif;
+                
+                margin-top: auto;
+                margin-bottom: auto;
+                margin: auto;
+                max-width: 800px;
+                max-height: 800px;
+                padding-top: 110px;
+                padding-bottom: 10%;
+                
+                
+            }
+
+            .container-fluid{
+                position:fixed;
+                font-family: 'Droid Arabic Kufi', serif;
+            }
+            .navbar-brand{
+                font-family: 'Droid Arabic Kufi', serif;
+                
+                font-size: 45px;
+            }
+
+            footer{
+
+                    margin-right: auto;
+                    margin-left: auto;
+                    background-color: #333333;
+                    text-align: center;
+                    padding: 2px;
+                    color: white;
+            }
+
+            fieldset{
+                margin: auto;
+                margin-top: 15px;
+                border: 0;
+               
+                width: 800px;
+                height: 500px;
+                text-align: left;
+            }
+            label{
+                color: black;
+                display: inline;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 10px;
+                margin-right: 10px;
+                font-weight: bold;
+                font-family: 'Droid Arabic Kufi', serif;
+            }
+
+            h1,h3, p{
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                font-family: 'Droid Arabic Kufi', serif;
+            }
+
+            input {
+                width: 100%;
+                color: black;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid black;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-family: 'Droid Arabic Kufi', serif;
+              }
+
+            fieldset{
+                padding-bottom: 4rem;
+            }
+
+            .Reservation-container{
+                background: transparent black;
+            }
+           
+            .button{
+                display: block;
+                width: 50%;
+                margin: 0 auto;
+                font-size: medium;
+                padding: 12px 20px;
+                border: 1px solid black;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+           
+        </style>
+    </head>
+    <body>
+            <div class="bg-image">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="C:\Users\duppa\OneDrive\Desktop\Restaruant_reservation\index.html">Gismat</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                        <li class="active"><a href="C:\Users\duppa\OneDrive\Desktop\Restaruant_reservation\index.html">Home</a></li>
+                        <li><a href="C:\Users\duppa\OneDrive\Desktop\Restaruant_reservation\About.html">About</a></li>
+                        <li><a href="C:\Users\duppa\OneDrive\Desktop\Restaruant_reservation\Menu.html">Menu</a></li>
+                        <li><a href="C:\Users\duppa\OneDrive\Desktop\Restaruant_reservation\.vscode\Reservation.html">Reservations</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main>
+                    <div class="Reservation-container">
+                        <div class="container1">   
+                            <form action=" " id="ReserveForm">
+                                <h1><em>RESERVATIONS</em></h1>
+                                <fieldset>
+                                    <article>
+                                        <label >Name <input type="text" name="user-name" id="Name" placeholder="Enter your name" maxlength="20"/></label>
+                                    </article>
+                                    <article>
+                                        <label >Numbers of guests <input type="number" name="Numberof-guests" id="Noofguests" min="1" max="8" placeholder="Number of guests" required /></label>
+                                    </article>
+                                    <article>
+                                        <label >Date <input type="date" name="date" id="reservationdate"  onfocus="this.min=new Date().toISOString().split('T')[0]" required /></label>
+                                    </article>
+                                    <article>
+                                        <label >Time <input type="time" name="Time" id="reservationtime"  required /></label>
+                                    </article>
+                                    <article>
+                                        <p>Thanks for Dining with <em><strong>Us</strong></em>!</p>
+                                    </article>
+                                    <article>
+                                        <strong><input id="submit" type="submit" name="Book" value="Reserve" formtarget="_blank" class="button" width="20px" height="40px" /></strong>
+                                    </article>
+                                </fieldset>
+                            </form>
+                        </div> 
+                    </div>
+                    <br>
+                    <div>
+                        <p id="success-message" style="color: green; display: none;">Reservation successful!</p>
+                        <p id="success-message1" style="color: green; display: none;">Name: <span id="display_name"></span></p> <p id="success-message2" style="color: green; display: none;">Noofguests : <span id="display_guests"></span></p>
+                        <p id="success-message3" style="color: green; display: none;">Date: <span id="display_date"></span></p>
+                        <p id="success-message4" style="color: green; display: none;">Time : <span id="display_time"></span></p>
+                    </div>
+                </main>
+
+                <footer class="bg-dark text-center text-white">
+                    <div class="container p-4 pb-0">
+                    <section class="mb-4">
+                        <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/media/set/?set=a.737834883529317&type=3&_rdr" role="button">
+                        <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://x.com/Gismatjailmandi" role="button">
+                        <i class="fab fa-twitter"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/results?search_query=gismat+jail+mandi" role="button">
+                        <i class="fab fa-youtube"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/gismat_jailmandi/?hl=en" role="button">
+                        <i class="fab fa-instagram"></i>
+                        </a> 
+                    </section> 
+                    </div>
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2024 Copyright:
+                    <a class="text-white" href="index.html">Gismat</a>
+                    </div>
+                </footer>
+            </div> 
+        <script src="Reserve.js"></script>
+    </body>
+</html>

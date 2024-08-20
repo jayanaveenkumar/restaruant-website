@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="Media\Favicon.ico">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        
+        <title>Gismat - Arabic Mandi</title>
+    </head>
+    <style>
+
+        .bg-image{
+          background: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);
+          background-size: 100vw 100vh;
+          background-repeat: no-repeat;
+        }
+
+        
+        .container-fluid{
+            position:fixed;
+            
+        }
+
+        .container1{
+          color: black;
+          font-family: 'Droid Arabic Kufi', serif;
+          
+          text-align: center;
+          
+        }
+        
+        .menu{
+          display: none;
+          font-family: 'Droid Arabic Kufi', serif;
+          
+         
+        }
+
+        p{
+          font-family: 'Droid Arabic Kufi', serif;
+          
+          font-size: medium;
+        }
+        
+        a:hover
+        {
+            background: red;
+        }
+
+        footer{
+            margin-right: auto;
+            margin-left: auto;
+            background-color: #333333;
+            text-align: center;
+            padding: 1px;
+            color: white;
+        }
+
+        Menu{
+            align-content: center;
+        }
+
+        h1,p,a{
+          font-family: 'Droid Arabic Kufi', serif;
+        }
+
+        .navbar-brand{
+            font-family: 'Droid Arabic Kufi', serif;
+            font-size: 45px;
+            
+        }
+
+        .w3-row{
+          color: whitesmoke;
+
+        }
+
+    </style>
+    <body>
+      <div class="bg-image"> 
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="index.html">Gismat</a>
+              </div>
+              <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="Menu.html">Menu</a></li>
+              <li><a href="Reservation.html">Reservations</a></li>
+              </ul>
+          </div>
+      </nav>
+
+        <div class="container1">
+            <h1>Gismat Menu</h3>
+            <p>Arabic Mandi</p>
+        </div>
+        <main>
+            <div class="middle-container">
+          
+                 <!-- <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu" style="background: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);"> -->
+                  <div class="w3-content">
+                
+                    <div class="w3-row w3-center w3-border w3-border-dark-grey" style="background-color: black;">
+                      <a href="javascript:void(0)" onclick="openMenu(event, 'Starters');" id="myLink">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red"><em>Starters</em></div>
+                      </a>
+                      <a href="javascript:void(0)" onclick="openMenu(event, 'Main Course');">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red"><em>Main Course</em></div>
+                      </a>
+                      <a href="javascript:void(0)" onclick="openMenu(event, 'Deserts/Drinks');">
+                        <div class="w3-col s4 tablink w3-padding-large w3-hover-red"><em>Deserts/Drinks</em></div>
+                      </a>
+                    </div>
+                
+                    <div id="Starters" class="w3-container menu w3-padding-32 w3-white">
+                      <h1><b>Chicken Platter</b> <span class="w3-right w3-tag w3-dark-grey w3-round">799</span></h1>
+                      <p class="w3-text-grey">Assocaited with GFC, China Gate, Stick chicken, Rosterd chicken</p>
+                      <hr>
+                   
+                      <h1><b>Mixed Platter</b> <span class="w3-right w3-tag w3-dark-grey w3-round">899</span></h1>
+                      <p class="w3-text-grey">Assocaited with GFC, China Gate, Stick chicken, Rosterd chicken</p>
+                      <hr>
+                      
+                      <h1><b>Alfahm Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">399</span></h1>
+                      <p class="w3-text-grey">Chicken marinated in a blend of yogurt, spices, and herbs, then grilled to perfection to be smoky, tender</p>
+                      <hr>
+                
+                      <h1><b>Arabian Special Fish</b> <span class="w3-right w3-tag w3-dark-grey w3-round">399</span></h1>
+                      <p class="w3-text-grey">Whole fish seasoned with a mix of spices, garlic, lemon, and fresh herbs, often served with rice or vegetables</p>
+                      <hr>
+      
+                    </div>
+                
+                    <div id="Main Course" class="w3-container menu w3-padding-32 w3-white">
+                      <h1><b>Chicken Mandi(Dry)</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">999</span></h1>
+                      <p class="w3-text-grey">Marinated chicken, basmati rice, and a blend of spices such as saffron, black lime, and cardamom</p>
+                      <hr>
+                   
+                      <h1><b>Lamb Mandi(Dry)</b> <span class="w3-right w3-tag w3-dark-grey w3-round"> 1299</span></h1>
+                      <p class="w3-text-grey">Tender lamb, basmati rice, and a mix of spices like saffron, cumin, and black lime</p>
+                      <hr>
+                      
+                      <h1><b>Juicy Mandi Lamb/Chicken(Gravy)</b> <span class="w3-right w3-tag w3-dark-grey w3-round">1349</span></h1>
+                      <p class="w3-text-grey">Choice of meat which is slow-cooked with aromatic spices, rice, and often saffron</p>
+                      <hr>
+                
+                      <h1><b>Fish Mandi</b> <span class="w3-right w3-tag w3-dark-grey w3-round">1299</span></h1>
+                      <p class="w3-text-grey">Spiced fish, basmati rice, and a blend of spices like saffron and cumin</p>
+                    </div>
+                
+                
+                    <div id="Deserts/Drinks" class="w3-container menu w3-padding-32 w3-white">
+                      <h1><b>Kheer</b> <span class="w3-tag w3-grey w3-round">Seasonal fruit</span><span class="w3-right w3-tag w3-dark-grey w3-round">99</span></h1>
+                      <p class="w3-text-grey">Rice, milk, sugar, and flavored with cardamom, often garnished with nuts and raisins</p>
+                      <hr>
+                   
+                      <h1><b>Gulab Jamun</b> <span class="w3-right w3-tag w3-dark-grey w3-round">99</span></h1>
+                      <p class="w3-text-grey">Milk solids, flour, and ghee, shaped into balls, fried until golden, and then soaked in a fragrant sugar syrup with cardamom</p>
+                      <hr>
+                      
+                      <h1><b>Soft drinks</b> <span class="w3-right w3-tag w3-dark-grey w3-round">29</span></h1>
+                      <p class="w3-text-grey">Choice of soft drinks like Pespi, Coke, Club Soda,Limca, Fruity</p>
+                      <hr>
+                      
+                      <h1><b>Lassi/ButterMilk</b> <span class="w3-right w3-tag w3-dark-grey w3-round">49</span></h1>
+                      <p class="w3-text-grey">Lassi- yogurt-based drink, sweetened ; Buttermilk - Tangy liquid made by churning yogurt</p>
+                    </div><br>
+                
+                  </div>
+                </div>
+                 <div>
+
+                 </div>
+            </div>
+        </main>
+
+        <footer class="bg-dark text-center text-white">
+            <div class="container p-4 pb-0">
+              <section class="mb-4">
+                <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/media/set/?set=a.737834883529317&type=3&_rdr" target="_blank" role="button">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://x.com/Gismatjailmandi" target="_blank" role="button">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/results?search_query=gismat+jail+mandi" target="_blank" role="button">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/gismat_jailmandi/?hl=en" target="_blank" role="button">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </section>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2024 Copyright:
+              <a class="text-white" href="index.html">Gismat</a>
+            </div>
+          </footer>
+
+          <script>
+            function openMenu(event, menuName) {
+              var i, x, tablinks;
+              x = document.getElementsByClassName("menu");
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < x.length; i++) {
+                 tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+              }
+              document.getElementById(menuName).style.display = "block";
+              event.currentTarget.firstElementChild.className += " w3-red";
+            }
+            document.getElementById("myLink").click();
+          </script>
+      </div>
+    </body>
+</html>
